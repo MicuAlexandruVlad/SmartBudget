@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.micua.smartbudget.RegisterUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <ImageView
+                android:layout_width="73dp"
+                android:layout_height="64dp"
+                android:src="@drawable/logo"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="36dp"
+                android:id="@+id/imageView2"
+                android:layout_marginEnd="-14dp"
+                android:layout_marginBottom="36dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mart Money"
+                android:textSize="30sp"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_marginEnd="36dp"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:id="@+id/et_email_reg_activity"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="35dp"
+        android:hint="Email"
+        android:padding="16dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="26dp"
+        android:id="@+id/et_password_reg_activity"
+        android:hint="Password"
+        android:padding="16dp"
+        android:inputType="textPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password_reg_activity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:id="@+id/btn_register_activity"
+        android:textColor="@color/text"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+</RelativeLayout>

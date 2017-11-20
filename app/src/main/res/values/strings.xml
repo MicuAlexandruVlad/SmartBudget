@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SmartBudget</string>
+    <string name="income_set_budget">Budget</string>
+    <string name="Make_new_envelopes">Make new Envelopes, edit existing ones, or delete thm on this screen.</string>
+    <string name="you_can_also">You can also change your Envelope order, budget period or budget amount. Then you can change the current balance in your Envelope by going to the Fill Envelopes screen.</string>
+    <string name="env_summary">Each envelope shows the balance remaining. The status bars show how
+        "full" or (un -full…) your envelope is.\n\nTap the envelope bars to see a list of transactions
+        in that envelope. From there you can edit a transaction.\n\nTo control the order of the envelopes
+        on this screen find "Edit Envelopes" in the overflow menu or visit the website and drag and drop
+        the envelopes on the Add/Edit Envelopes page.</string>
+
+    <string name="text_black_line">When your budgeting period is set to monthly, weekly, or semi-monthly,
+        the black line on the expanded view shows you where "today" is.\n\nIf the green bar is to the right
+        of the black line you are on target! If not, time to play catch up…\n\nYou can change your budgeting period in Settings.</string>
+</resources>

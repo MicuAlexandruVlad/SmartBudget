@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/mail" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toStartOf="@+id/tv_budget_for_envelope"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/tv_name_envelope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:padding="4dp"
+            android:gravity="center"
+            android:textColor="#6C99B4"
+            android:textSize="15sp"
+            tools:text="Gas" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_envelope"
+            android:id="@+id/tv_choice_description"
+            android:text="No Action"
+            android:textSize="13sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="6dp"
+            android:layout_alignEnd="@+id/tv_choice_description"
+            android:layout_alignStart="@+id/tv_choice_description"
+            android:layout_below="@+id/tv_choice_description"
+            android:progress="10"
+            android:layout_marginTop="4dp"
+            android:progressDrawable="@drawable/progress_bar" />
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_budget_for_envelope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:padding="4dp"
+        android:gravity="center"
+        android:textColor="#6C99B4"
+        android:textSize="18sp"
+        tools:text="5000" />
+
+</RelativeLayout>

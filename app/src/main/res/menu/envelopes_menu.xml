@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Envelope Transfer"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:id="@+id/menu_envelope_transfer"
+        />
+    <item android:title="Edit Envelopes"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:id="@+id/menu_edit_envelopes"
+        />
+    <item android:title="Help"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/menu_help"
+        />
+    <item android:title="Settings"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:id="@+id/menu_settings"
+        />
+</menu>

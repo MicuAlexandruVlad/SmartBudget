@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.micua.smartbudget.SetupBudget">
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="+ Add Envelope"
+            android:textAllCaps="false"
+            android:layout_margin="16dp"
+            android:textSize="16sp"
+            android:textColor="#403634"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_alignParentStart="true"
+            android:id="@+id/btn_add_envelope" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_add_envelope"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A3A3A5"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/linearLayout2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Monthly (0)"
+                        android:id="@+id/tv_budget_monthly"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 out of 10 envelopes left"
+                        android:id="@+id/tv_envelopes_left"
+                        android:textColor="#F0F0F0"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="16dp"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:id="@+id/scrollView2"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_alignParentStart="true">
+
+                    <ListView
+                        android:id="@+id/lv.monthly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A3A3A5"
+                    android:orientation="horizontal"
+
+                    android:id="@+id/linearLayout3"
+                    android:layout_below="@+id/scrollView2"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Other (0)"
+                        android:id="@+id/tv_budget_time_other"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_other_envelopes_left"
+                        android:text="10 out of 10 envelopes left"
+                        android:textColor="#F0F0F0"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="16dp"
+                        />
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_annual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout3" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:background="#FAFAFA"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_setup_budget_remaining_balance"
+                android:background="@color/colorPrimary"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Remaining"
+                    android:textColor="#403634"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/tv_remaining_money"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textColor="#403634"/>
+
+            </LinearLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.2"
+                android:padding="20dp"
+                android:background="@android:color/transparent"
+                android:text="Next"
+                android:textSize="17sp"
+                android:id="@+id/btn_next"
+                android:textColor="#007FEB"/>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "129654336041",
+    "firebase_url": "https://smartbudget-47947.firebaseio.com",
+    "project_id": "smartbudget-47947",
+    "storage_bucket": "smartbudget-47947.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129654336041:android:4596d82e3bc3bc54",
+        "android_client_info": {
+          "package_name": "com.example.micua.smartbudget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129654336041-j55qm264sd21qm17qht531inqt4ll6f9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.micua.smartbudget",
+            "certificate_hash": "00bc96b4b9a25fcf02ed5f28cae05ae6d1e52d60"
+          }
+        },
+        {
+          "client_id": "129654336041-ko8vl7e2dns0g8di8shc2idul7porpk3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.micua.smartbudget",
+            "certificate_hash": "231b19618c3917adda4a8a5450fbc76e706e417d"
+          }
+        },
+        {
+          "client_id": "129654336041-gpj6qm6cro2lgo60gj46838drcn83eub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRq1tlic2xM8bhxis_kO5zaBruh8smMmw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129654336041-gpj6qm6cro2lgo60gj46838drcn83eub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

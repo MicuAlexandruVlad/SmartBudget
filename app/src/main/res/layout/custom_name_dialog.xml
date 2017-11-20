@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Device Nickname"
+        android:paddingStart="24dp"
+        android:id="@+id/top1"
+        android:paddingTop="24dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter name"
+        android:layout_below="@id/top1"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        style="@style/Base.V7.Widget.AppCompat.EditText"
+        android:inputType="textCapWords"
+        android:id="@+id/et_custom_dialog_device_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:id="@+id/btn_custom_dialog_ok"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/et_custom_dialog_device_name"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:text="Ok"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_custom_dialog_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/btn_custom_dialog_ok"
+        android:layout_toStartOf="@+id/btn_custom_dialog_ok"
+        android:background="@android:color/transparent"
+        android:text="Cancel"
+        android:layout_marginEnd="8dp"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="schedule_time_period">
+        <item>Once</item>
+        <item>Weekly</item>
+        <item>Every 2 weeks</item>
+        <item>Every 4 weeks</item>
+        <item>Every month</item>
+        <item>Last Day of Month</item>
+        <item>Every 2 months</item>
+        <item>Every 3 months</item>
+        <item>Every 6 months</item>
+        <item>Every year</item>
+    </string-array>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_main_body"
+    tools:context="com.example.micua.smartbudget.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/ll_top_main">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <ImageView
+                android:layout_width="73dp"
+                android:layout_height="64dp"
+                android:src="@drawable/logo"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="36dp"
+                android:id="@+id/imageView2"
+                android:layout_marginBottom="36dp"
+                android:layout_marginEnd="-14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mart Money"
+                android:textColor="@color/text"
+                android:textSize="30sp"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_marginEnd="36dp"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#009199"
+        android:id="@+id/tv_separator_main"
+        android:layout_below="@id/ll_top_main"/>
+
+
+    <Button
+        android:id="@+id/btn_sign_in_main"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_register_main"
+        android:layout_alignStart="@+id/btn_register_main"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/text" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:id="@+id/btn_register_main"
+        android:textColor="@color/text"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
