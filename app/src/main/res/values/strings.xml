@@ -8,8 +8,16 @@
         in that envelope. From there you can edit a transaction.\n\nTo control the order of the envelopes
         on this screen find "Edit Envelopes" in the overflow menu or visit the website and drag and drop
         the envelopes on the Add/Edit Envelopes page.</string>
-
+    <string name="schedule">Schedule this… (Requires a registered household. Head to the Envelopes screen to register.)</string>
     <string name="text_black_line">When your budgeting period is set to monthly, weekly, or semi-monthly,
         the black line on the expanded view shows you where "today" is.\n\nIf the green bar is to the right
         of the black line you are on target! If not, time to play catch up…\n\nYou can change your budgeting period in Settings.</string>
+    <string name="add_to_quick">Add to Quick Transactions widget\n(edit from Settings)</string>
+    <string name="payees">SmartBudget will suggest recent Payees that you have entered. Also, if you record at point-of-sale
+        SmartBudget will help you the next time by suggesting Payees you have used that are located near where you are.</string>
+    <string name="refunds">Use the Expense/Credit toggle to record these.</string>
+    <string name="tags">If you want to add a tag to an expense, you can use the "#" sign in the Notes field. For example,
+        to mark tax-deductible expenses, put "#tax" in the notes. Or for expenses related to your car, tag it "#honda".</string>
+    <string name="location">SmartBudget will remember your transaction location on your phone and auto-suggest the Payee, Envelope
+        and Account the next time you are in the area. You can enable this feature in Settings.</string>
 </resources>

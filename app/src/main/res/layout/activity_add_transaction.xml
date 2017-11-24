@@ -1,9 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.micua.smartbudget.AddTransaction">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payee"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_payee_add_transaction"
+            android:textSize="15sp"
+            android:hint="Whom did you pay ?"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="13dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_amount_add_transaction"
+            android:textSize="15sp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="13dp"
+            />
+
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:gravity="center_horizontal"
+            android:text="Envelope"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_envelope_add_transaction"
+            android:layout_marginTop="6dp"
+            android:spinnerMode="dropdown"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_account_add_transaction"
+            android:layout_marginTop="6dp"
+            android:spinnerMode="dropdown"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/text"
+                android:textSize="15sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Check#"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/text"
+                android:textSize="15sp"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_date_add_transaction"
+                android:textSize="15sp"
+                android:hint="Select Date"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="13dp"
+                android:focusable="false"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_check_add_transaction"
+                android:textSize="15sp"
+                android:hint="(Optional)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="13dp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_schedule_add_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/cb_schedule_add_transaction"
+                android:text="@string/schedule"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_note_add_transaction"
+            android:textSize="15sp"
+            android:hint="(Optional)"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="13dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_note_add_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/cb_note_add_transaction"
+                android:text="@string/add_to_quick"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

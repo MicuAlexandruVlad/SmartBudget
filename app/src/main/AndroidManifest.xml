@@ -31,7 +31,8 @@
         <activity android:name=".MainScreens" />
         <activity android:name=".EnvelopesHelp" />
         <activity android:name=".Settings" />
-        <activity android:name=".AddTransaction"></activity>
+        <activity android:name=".AddTransaction" />
+        <activity android:name=".HelpAddTransaction"></activity>
     </application>
 
 </manifest>

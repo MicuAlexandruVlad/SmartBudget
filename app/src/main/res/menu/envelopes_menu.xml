@@ -21,4 +21,9 @@
         app:showAsAction="never"
         android:id="@+id/menu_settings"
         />
+    <item android:title="Fill envelope"
+        android:icon="@drawable/fill"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="5"
+        android:id="@+id/menu_fill_envelopes"/>
 </menu>

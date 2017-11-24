@@ -80,6 +80,14 @@
             android:text="Yearly" />
 
         <TextView
+            android:id="@+id/tv_frag_total_cost_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_frag_total_cost_month"
+            android:layout_below="@+id/ll_frag_month_holder"
+            android:text="850.58" />
+
+        <TextView
             android:id="@+id/tv_separator2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -98,6 +106,39 @@
                 android:id="@+id/lv_frag_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_separator3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_frag_year_holder"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tv_separator3"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:text="[Unallocated]"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_unallocated_frag_envelopes"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:text="584"/>
 
         </LinearLayout>
 
