@@ -4,6 +4,7 @@ package com.example.micua.smartbudget;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,6 +25,7 @@ public class EnvelopesFragment extends Fragment{
     private ScrollView parentLayout;
     private List<Envelope> month, year;
     private EnvelopesFinalAdapter envelopesAdapterMonth, envelopesAdapterYear;
+    private FloatingActionButton addTransaction;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class EnvelopesFragment extends Fragment{
         setHasOptionsMenu(true);
         parentLayout = (ScrollView) inflater.inflate(R.layout.fragment_envelopes, container, false);
 
+        addTransaction = (FloatingActionButton) parentLayout.findViewById(R.id.fab_start_add_transaction);
         envelopesHolderMonth = (LinearLayout) parentLayout.findViewById(R.id.ll_frag_month_holder);
         envelopesHolderYear = (LinearLayout) parentLayout.findViewById(R.id.ll_frag_year_holder);
         envelopesMonth = (ListView) parentLayout.findViewById(R.id.lv_frag_month);
