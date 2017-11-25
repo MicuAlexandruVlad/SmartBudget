@@ -1,6 +1,7 @@
 package com.example.micua.smartbudget;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,6 +20,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static android.app.Activity.RESULT_OK;
 
 public class EnvelopesFragment extends Fragment{
     private LinearLayout envelopesHolderMonth, envelopesHolderYear;
@@ -143,9 +148,51 @@ public class EnvelopesFragment extends Fragment{
         }
 
         for (int i = 0; i < year.size(); i++) {
-            total += Integer.valueOf(month.get(i).getBudget());
+            total += Integer.valueOf(year.get(i).getBudget());
             annual += Integer.valueOf(year.get(i).getBudget());
         }
         return new int[]{total, monthly, annual};
+    }
+    private void updateCostViews() {
+        totalExpenseTV.setText(computeCosts(month, year)[0]);
+        annualExpenseTV.setText(computeCosts(month, year)[2]);
+        monthExpenseTv.setText(computeCosts(month, year)[1]);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == ADD_TRANSACTION_ID && resultCode == RESULT_OK) {
+            int size = month.size() + year.size();
+            for (int i = 0; i < month.size(); i++) {
+                String envName = data.getStringExtra("value " + i).split(" ")[0];
+                int changedBudget = getChangedBudget(data.getStringExtra("value " + i));
+                if (i < month.size()) {
+                    month.remove(i);
+                    month.add(i, new Envelope(envName, changedBudget + ""));
+                    envelopesAdapterMonth.notifyDataSetChanged();
+                }
+            }
+            int j = 0;
+            for (int i = month.size(); i < size; i++) {
+                    String envName = data.getStringExtra("value " + i).split(" ")[0];
+                    int changedBudget = getChangedBudget(data.getStringExtra("value " + i));
+                    year.remove(j);
+                    year.add(j, new Envelope(envName, changedBudget + ""));
+                    envelopesAdapterYear.notifyDataSetChanged();
+                    j++;
+                }
+
+        }
+        //TODO: Update cost views after returning from AddTransaction
+    }
+
+    private int getChangedBudget(String string) {
+        int budget = 0;
+        Pattern pattern = Pattern.compile("\\[(.*?)\\]");
+        Matcher m = pattern.matcher(string);
+        while (m.find()) {
+            budget = Integer.valueOf(m.group(1));
+        }
+        return budget;
     }
 }

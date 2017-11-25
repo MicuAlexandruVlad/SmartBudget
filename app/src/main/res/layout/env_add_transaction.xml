@@ -16,13 +16,14 @@
         <ImageView
             android:layout_width="28dp"
             android:layout_height="23dp"
-            android:id="@+id/iv_dialog_icon"
+            android:id="@+id/iv_dialog_icon_add_transaction"
             android:src="@drawable/mail"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_dialog_title"
+            android:id="@+id/tv_dialog_title_add_transaction"
+            android:textColor="@color/text"
             tools:text="Groceries"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -39,7 +40,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cb_envelope_budget_op1"/>
+            android:id="@+id/cb_envelope_budget_op1_add_transaction"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,13 +59,13 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cb_envelope_budget_op3"/>
+            android:id="@+id/cb_envelope_budget_op3_add_transaction"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
-            android:id="@+id/tv_set_to_amount"
+            android:id="@+id/tv_set_to_amount_add_transaction"
             android:text="Set Amount:"/>
 
     </LinearLayout>
@@ -72,7 +73,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/et_custom_amount"
+        android:id="@+id/et_custom_amount_add_transaction"
         android:inputType="number"
         android:hint="Enter amount"
         android:textSize="13sp"
@@ -88,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:id="@+id/btn_done"
+            android:id="@+id/btn_done_add_transaction"
             android:text="Done"
             android:background="@android:color/transparent"
             android:textColor="#007FEB"/>
