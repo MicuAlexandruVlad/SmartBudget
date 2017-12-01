@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddTransaction extends AppCompatActivity {
-    //TODO: Check if the total retracted amount is not bigger than the amountVal
+    //TODO: Check if the total retracted amount is not bigger than the amountVal - DONE
     private Spinner envelopes, accounts;
     private EditText amount, payee;
     private int amountVal;

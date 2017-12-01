@@ -35,6 +35,8 @@ public class SignIn extends AppCompatActivity {
         final EditText password = (EditText) findViewById(R.id.et_password_sign_in);
 
         auth = FirebaseAuth.getInstance();
+        email.setText("test2@yahoo.com");
+        password.setText("test2pass");
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.micua.smartbudget.FillEnvelopesMaster">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_color_accent"
+            android:id="@+id/btn_from_new_income_master"
+            android:text="from new income"
+            android:textColor="@color/text"
+            android:layout_marginEnd="4dp"/>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_from_unallocated_master"
+            android:text="from unallocated"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ripple_color_gray"
+            android:textColor="@color/text"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_from_new_income_holder"
+        android:paddingBottom="26dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill from New Income"
+            android:background="#DDDDDD"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/text"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Received from"
+            android:paddingStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/et_income_name_master"
+            android:layout_marginTop="8dp"
+            android:hint="My Employer or Paycheck"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to fill Envelopes"
+            android:paddingStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner_fill_method_master"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:paddingStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/et_amount_master"
+            android:layout_marginTop="8dp"
+            android:hint="0.00"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:paddingStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner_account_master"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:paddingStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/et_date_master"
+            android:layout_marginTop="8dp"
+            android:hint="Pick a date"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="numberDecimal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/cb_schedule_master"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule this..."
+                android:layout_marginStart="4dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_envelopes_holder_master"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DDDDDD">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Envelopes"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="Monthly"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_month_hold_master">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lv_month_master"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="Annual"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_year_hold_master">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lv_year_master"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:paddingStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/et_note_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:inputType="textCapWords"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_unallocated_holder_master"
+            android:paddingBottom="26dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill from Unallocated"
+                android:background="#DDDDDD"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:paddingStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/et_income_description_master"
+                android:layout_marginTop="8dp"
+                android:hint="Monthly Envelope Fill"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:inputType="textCapWords"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tv_amount_left_unallocated_master"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="#3DB38D" />
+
+                <TextView
+                    android:id="@+id/tv001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/tv_amount_left_unallocated_master"
+                    android:text="Left Unallocated"
+                    android:layout_marginStart="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_currently_unallocated_master"
+                    android:text="0.00 Currently Unallocated"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_used_this_fill_master"
+                    android:text="0.00 Used this Fill"
+                    android:layout_below="@id/tv_currently_unallocated_master"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignStart="@id/tv_currently_unallocated_master"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

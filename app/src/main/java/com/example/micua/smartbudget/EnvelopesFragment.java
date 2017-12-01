@@ -99,13 +99,14 @@ public class EnvelopesFragment extends Fragment{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            //TODO case R.id.menu_fill_envelopes:
-            case R.id.menu_help: startActivity(new Intent(getActivity(), EnvelopesHelp.class));
-            case R.id.menu_edit_envelopes: startActivity(new Intent(getActivity(), SetupBudget.class));
+            case R.id.menu_fill_envelopes: Intent intent1 = new Intent(getActivity(), FillEnvelopesMaster.class);
+                                           startActivity(intent1); return true;
+            case R.id.menu_help: startActivity(new Intent(getActivity(), EnvelopesHelp.class)); return true;
+            case R.id.menu_edit_envelopes: startActivity(new Intent(getActivity(), SetupBudget.class)); return true;
             case R.id.menu_settings:Intent intent =  new Intent(getActivity(), Settings.class);
-                                    intent.putExtra("restarted", false); startActivity(intent);
+                                    intent.putExtra("restarted", false); startActivity(intent); return true;
+            default: return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     private void getData(List<Envelope> monthly, List<Envelope> annual, Intent data) {

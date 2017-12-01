@@ -32,7 +32,8 @@
         <activity android:name=".EnvelopesHelp" />
         <activity android:name=".Settings" />
         <activity android:name=".AddTransaction" />
-        <activity android:name=".HelpAddTransaction"></activity>
+        <activity android:name=".HelpAddTransaction" />
+        <activity android:name=".FillEnvelopesMaster"></activity>
     </application>
 
 </manifest>

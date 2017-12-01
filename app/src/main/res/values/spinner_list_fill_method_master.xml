@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fill_method_master">
+        <item>Keep Unallocated</item>
+        <item>Fill Each Envelope</item>
+    </string-array>
+</resources>
