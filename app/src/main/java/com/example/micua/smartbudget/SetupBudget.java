@@ -56,6 +56,9 @@ public class SetupBudget extends AppCompatActivity {
         envelopes = new ArrayList<>();
         annualEnv = new ArrayList<>();
         incomes = new ArrayList<>();
+        envelopes.add(new Envelope("Gas", "240"));
+        envelopes.add(new Envelope("Phone", "80"));
+        annualEnv.add(new Envelope("Car", "1000"));
         numMonthlyEnv = envelopes.size();
         numAnnualEnvelopes = annualEnv.size();
         adapter = new CustomListAdapter(SetupBudget.this, R.layout.list_item, envelopes);

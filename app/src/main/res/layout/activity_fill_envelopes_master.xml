@@ -187,7 +187,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#DDDDDD">
+                android:background="#DDDDDD"
+                android:layout_marginTop="16dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -343,6 +344,110 @@
 
             </RelativeLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:paddingStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/et_date_unallocated_master"
+                android:layout_marginTop="8dp"
+                android:focusable="false"
+                android:clickable="false"
+                android:hint="Enter a Date"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:inputType="textCapWords"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/cb_schedule_unallocated_master"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schedule this..."
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="Monthly"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_month_hold_unallocated_master">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lv_month__unallocated_master"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="Annual"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_year_hold_unallocated_master">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lv_year_unallocated_master"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:paddingStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/et_note_unallocated_master"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:inputType="textCapWords"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

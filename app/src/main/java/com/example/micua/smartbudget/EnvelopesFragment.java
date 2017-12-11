@@ -17,8 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,7 +37,9 @@ public class EnvelopesFragment extends Fragment{
     private EnvelopesFinalAdapter envelopesAdapterMonth, envelopesAdapterYear;
     private FloatingActionButton addTransaction;
     private TextView totalExpenseTV, monthExpenseTv, annualExpenseTV, unallocatedAmountTV;
-    public static final int ADD_TRANSACTION_ID = 6;
+    public static final int ADD_TRANSACTION_ID = 6, FILL_MASTER_REQ_ID = 222;
+    private List<Transaction> unallocatedTransactions;
+    public static final DateFormat f = new SimpleDateFormat("dd/MM");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +64,7 @@ public class EnvelopesFragment extends Fragment{
 
         month = new ArrayList<>();
         year = new ArrayList<>();
+        unallocatedTransactions = new ArrayList<>();
 
         Intent extras = getActivity().getIntent();
         getData(month, year, extras);
@@ -69,6 +76,15 @@ public class EnvelopesFragment extends Fragment{
 
         envelopesMonth.setAdapter(envelopesAdapterMonth);
         envelopesYear.setAdapter(envelopesAdapterYear);
+
+        unallocatedAmountTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UnallocatedTransactions.class);
+                sendTransactions(unallocatedTransactions, intent);
+                startActivity(intent);
+            }
+        });
 
         addTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +116,8 @@ public class EnvelopesFragment extends Fragment{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_fill_envelopes: Intent intent1 = new Intent(getActivity(), FillEnvelopesMaster.class);
-                                           startActivity(intent1); return true;
+                                           transferData(month, year, intent1);
+                                           startActivityForResult(intent1, FILL_MASTER_REQ_ID); return true;
             case R.id.menu_help: startActivity(new Intent(getActivity(), EnvelopesHelp.class)); return true;
             case R.id.menu_edit_envelopes: startActivity(new Intent(getActivity(), SetupBudget.class)); return true;
             case R.id.menu_settings:Intent intent =  new Intent(getActivity(), Settings.class);
@@ -162,6 +179,20 @@ public class EnvelopesFragment extends Fragment{
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == FILL_MASTER_REQ_ID && resultCode == RESULT_OK) {
+            //TODO: take data back from fill envelopes master
+            int opID = data.getIntExtra("op", 0);
+            if (opID == 1) {
+                String receivedFrom = data.getStringExtra("received from");
+                float amount = data.getFloatExtra("amount", 0);
+
+                String fillChoice = data.getStringExtra("choice");
+                if (fillChoice.equalsIgnoreCase("unallocated")) {
+                    unallocatedAmountTV.setText((amount + Float.valueOf(unallocatedAmountTV.getText().toString())) + "");
+                    unallocatedTransactions.add(new Transaction(getCurrentDate(), receivedFrom, "My Account", amount));
+                }
+            }
+        }
         if (requestCode == ADD_TRANSACTION_ID && resultCode == RESULT_OK) {
             int size = month.size() + year.size();
             for (int i = 0; i < month.size(); i++) {
@@ -196,4 +227,39 @@ public class EnvelopesFragment extends Fragment{
         }
         return budget;
     }
+
+    private void transferData(List<Envelope> month, List<Envelope> year, Intent intent) {
+        int sizeM = month.size(), sizeA = year.size();
+
+        for (int i = 0; i < sizeA; i++) {
+            intent.putExtra("final annual name " + i, year.get(i).getName());
+            intent.putExtra("final annual budget " + i, year.get(i).getBudget());
+        }
+
+        for (int i = 0; i < sizeM; i++) {
+            intent.putExtra("final month name " + i, month.get(i).getName());
+            intent.putExtra("final month budget " + i, month.get(i).getBudget());
+        }
+
+        intent.putExtra("sizemf", sizeM);
+        intent.putExtra("sizeaf", sizeA);
+    }
+
+    private String getCurrentDate() {
+        Date date = new Date();
+        return f.format(date);
+    }
+
+    private void sendTransactions(List<Transaction> transactions, Intent intent) {
+        intent.putExtra("size", transactions.size());
+        for (int i = 0; i < transactions.size(); i++) {
+            intent.putExtra("name" + i, transactions.get(i).getName());
+            intent.putExtra("date" + i, transactions.get(i).getDate());
+            intent.putExtra("account" + i, transactions.get(i).getAccount());
+            intent.putExtra("value" + i, transactions.get(i).getValueAdded());
+            intent.putExtra("total value" + i, transactions.get(i).getTotalValue());
+        }
+    }
+    //TODO: make function that updates total unallocated value in transactions obj for every transaction added
+    private void getCurrentTotal() {}
 }

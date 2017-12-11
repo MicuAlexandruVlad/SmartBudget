@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tv_date_unallocated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:text="26/11"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll11"
+        android:layout_toEndOf="@id/tv_date_unallocated"
+        android:layout_marginStart="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Env_name"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/tv_env_name_unallocated"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Account"
+            android:id="@+id/tv_account_unallocated"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+250.54"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:textColor="#2EBC8C"
+            android:id="@+id/tv_env_added_val_unallocated"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="500"
+            android:textSize="16sp"
+            android:layout_gravity="end"
+            android:id="@+id/tv_total_val_unallocated"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

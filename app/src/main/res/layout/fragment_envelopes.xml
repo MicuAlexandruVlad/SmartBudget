@@ -122,23 +122,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_below="@id/tv_separator3"
-            android:layout_margin="16dp">
+            android:layout_margin="16dp"
+            android:paddingBottom="26dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:textSize="15sp"
                 android:text="[Unallocated]"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_unallocated_frag_envelopes"
                 android:textAlignment="textEnd"
                 android:textColor="#000"
                 android:textSize="15sp"
-                android:text="584"/>
+                android:text="0"/>
 
         </LinearLayout>
 
@@ -149,7 +152,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_margin="16dp"
-            android:src="@drawable/plus"/>
+            android:src="@drawable/plus"
+            />
 
     </RelativeLayout>
 </ScrollView>

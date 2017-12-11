@@ -20,4 +20,12 @@
         to mark tax-deductible expenses, put "#tax" in the notes. Or for expenses related to your car, tag it "#honda".</string>
     <string name="location">SmartBudget will remember your transaction location on your phone and auto-suggest the Payee, Envelope
         and Account the next time you are in the area. You can enable this feature in Settings.</string>
+    <string name="fill_from_income">Enter your paycheck as a new income. Choose "Fill Each Envelope"
+        to fill your Envelope right away, or "Keep Unallocated\" to save it for later.</string>
+    <string name="fill_from_unallocated">Fill your Envelope with money you previously kept Unallocated.</string>
+    <string name="add_or_set">Choose "Add" to rollover an Envelope\'s current balance and add more to it
+        \n\nChoose "Set" to not rollover and set the balance to a particular amount.
+        \n\nFor example, if an Envelope has a current balance of 10.
+        \n\nAdd 15 will bring the balance to 25.
+        \n\nSet 15 will bring the balance to 15.</string>
 </resources>
