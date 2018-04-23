@@ -28,4 +28,6 @@
         \n\nFor example, if an Envelope has a current balance of 10.
         \n\nAdd 15 will bring the balance to 25.
         \n\nSet 15 will bring the balance to 15.</string>
+    <string name="delete_diaog_added">Are you sure you want to delete this transaction ?</string>
+    <string name="text1">The Set value should be higher than the actual budget</string>
 </resources>

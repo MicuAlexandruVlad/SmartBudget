@@ -9,5 +9,6 @@
     <color name="secondThemeDark">#2E112D</color>
     <color name="secondTheme">#540032</color>
     <color name="secondThemeAccent">#F0433A</color>
+    <color name="red">#E42020</color>
 
 </resources>

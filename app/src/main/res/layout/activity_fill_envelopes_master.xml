@@ -326,21 +326,14 @@
                     android:text="Left Unallocated"
                     android:layout_marginStart="4dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_currently_unallocated_master"
-                    android:text="0.00 Currently Unallocated"
-                    android:layout_alignParentEnd="true"/>
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_used_this_fill_master"
                     android:text="0.00 Used this Fill"
-                    android:layout_below="@id/tv_currently_unallocated_master"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignStart="@id/tv_currently_unallocated_master"/>
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 

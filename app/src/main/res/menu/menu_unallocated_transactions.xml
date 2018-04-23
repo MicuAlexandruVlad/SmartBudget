@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:id="@+id/btn_done_added"
+        android:orderInCategory="1"
+        android:icon="@drawable/tick"
+        android:title="Done"
+        app:showAsAction="always"/>
+    <item android:id="@+id/btn_bin_added"
+        android:title="Remove"
+        android:orderInCategory="2"
+        android:icon="@drawable/bin"
+        app:showAsAction="always"/>
+    <item android:title="Help"
+        android:id="@+id/menu_help_added"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+
+</menu>

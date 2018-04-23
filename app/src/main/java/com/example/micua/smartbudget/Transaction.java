@@ -3,7 +3,7 @@ package com.example.micua.smartbudget;
 
 
 public class Transaction {
-    private String date, name, account;
+    private String date, name, account, note;
     private float totalValue = 0, valueAdded = 0;
 
     public Transaction(String name, float valueAdded) {
@@ -20,6 +20,14 @@ public class Transaction {
         this.name = name;
         this.account = account;
         this.valueAdded = valueAdded;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 
     public String getDate() {

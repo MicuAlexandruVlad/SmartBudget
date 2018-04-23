@@ -35,7 +35,9 @@
         <activity android:name=".HelpAddTransaction" />
         <activity android:name=".FillEnvelopesMaster" />
         <activity android:name=".FillMasterHelp" />
-        <activity android:name=".UnallocatedTransactions"></activity>
+        <activity android:name=".UnallocatedTransactions" />
+        <activity android:name=".AddedToUnallocated" />
+        <activity android:name=".EnvelopesTrans"></activity>
     </application>
 
 </manifest>

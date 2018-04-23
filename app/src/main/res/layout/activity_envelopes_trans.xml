@@ -6,56 +6,57 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:fillViewport="true"
-    tools:context="com.example.micua.smartbudget.UnallocatedTransactions">
+    tools:context="com.example.micua.smartbudget.EnvelopesTrans">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[Unallocated]"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:id="@+id/tv11_env"/>
 
         <TextView
-            android:id="@+id/tv12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv11"
-            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:id="@+id/tv12"
             android:text="Transactions"
-            android:textSize="16sp" />
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv11_env"/>
 
         <TextView
-            android:id="@+id/tv13"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@id/tv12"
-            android:background="@color/text" />
+            android:id="@+id/tv13"
+            android:background="@color/text"
+            android:layout_below="@id/tv12"/>
 
         <TextView
-            android:id="@+id/tv_total_value_unallocated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:id="@+id/tv_total_value_env"
+            tools:text="2584.4"
             android:textSize="16sp"
-            tools:text="2584.4" />
+            android:layout_alignParentEnd="true"
+            />
 
         <LinearLayout
-            android:id="@+id/ll_unallocated_holder_trans"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_env_holder_trans"
             android:layout_below="@id/tv13"
-            android:layout_marginTop="4dp"
-            android:orientation="vertical">
+            android:layout_marginTop="4dp">
 
             <ListView
-                android:id="@+id/lv_unallocated"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="26dp" />
+                android:id="@+id/lv_env"
+                android:paddingBottom="26dp"/>
 
         </LinearLayout>
 

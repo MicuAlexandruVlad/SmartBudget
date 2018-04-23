@@ -51,19 +51,11 @@ public class AdapterNoProgressBar extends ArrayAdapter<Envelope> {
                 description.setText("No Change");
             }
             else
-                if (e.getChoice() == 2) {
-                    description.setText("Add Budget Amount of " + e.getBudget());
-                }
+                if (e.getChoice() == 2)
+                    description.setText("Add Specific Amount:");
                 else
-                    if (e.getChoice() == 3) {
-                        description.setText("Set to Budget Amount of " + e.getBudget());
-                    }
-                    else
-                        if (e.getChoice() == 4)
-                            description.setText("Add Specific Amount:");
-                        else
-                            if (e.getChoice() == 5)
-                                description.setText("Set to Specific Amount:");
+                    if (e.getChoice() == 3)
+                        description.setText("Set to Specific Amount:");
         }
 
         return v;
